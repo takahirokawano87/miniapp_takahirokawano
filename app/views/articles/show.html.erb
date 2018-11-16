@@ -35,8 +35,8 @@
     <!-- ここからフォーム -->
     <% if current_user %>
       <%= form_for(@article) do |f| %>
-        <textarea cols="30" name="text" placeholder="コメントする" rows="2"></textarea>
-          <input type="submit" value="SENT">
+        <%= f.text_area :comments, placeholder:"コメントする", style: "cols: 30 ; rows: 2" %>
+          <%= f.submit "SENT" %>
       <% end %>
     <% end %>
     <div class="comments">
