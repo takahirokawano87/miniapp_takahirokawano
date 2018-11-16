@@ -1,0 +1,33 @@
+<div class="contents_row">
+  <div class="container">
+    <div class="msr_box01">
+      <a href="#">
+        <img src="<%= article.image %>" width="60%" height="50%" alt="img"/>
+          <div class="main" >
+            <p><%= simple_format(article.text) %></p>
+          </div>
+        <span class="name">
+          <a href="/users/<%= article.user_id %>">
+            <span>投稿者</span><%= article.user.nickname %>
+          </a>
+        </span>
+      </a>
+      <div class="more">
+        <ul class="more_list">
+          <li>
+            <%= link_to "詳細", "/articles/#{article.id}", class: "waves-effect waves-light btn", method: :get %>
+          </li>
+          <% if user_signed_in? && current_user.id == article.user_id %>
+            <li>
+              <%= link_to '編集', "/articles/#{article.id}/edit", class: "waves-effect waves-light btn", method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', "/articles/#{article.id}", class: "waves-effect waves-light btn", method: :delete %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

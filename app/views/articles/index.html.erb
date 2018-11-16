@@ -1,0 +1,7 @@
+<div class="contents_row">
+  <% @articles.each do |article| %>
+    <%= render partial: "article", locals: { article: article} %>
+  <% end %>
+  <script type="text/javascript" src="./app.js"></script>
+</div>
+<%= paginate(@articles) %>

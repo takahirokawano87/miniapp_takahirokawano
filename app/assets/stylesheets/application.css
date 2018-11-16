@@ -1,0 +1,159 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*実行していたやつ*/
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&subset=japanese');
+
+body{
+  font-family: 'M PLUS Rounded 1c', sans-serif
+}
+
+
+.nav{
+  position: fixed;
+}
+
+ .brand-logo a{
+  font-weight: bold;
+ }
+
+.content_post{
+  margin: 0 auto;
+/*  width: 100%;*/
+}
+
+.contents_row{
+/*  background-color: #b2dfdb;*/
+  text-align: center;
+  padding-top: 20px;
+  margin: 0 100px;
+}
+
+.more{
+  background-color: #004d40;
+}
+
+.more_list{
+  display: inline-block
+}
+
+.more_list li{
+  display: inline-block;
+}
+
+.more_list a{
+  line-height: center;
+}
+
+.article_show_main p{
+  word-wrap: break-word;
+}
+
+.article_show_more_list li{
+  display: inline-block;
+  margin:0 0 0 auto;
+}
+
+.pagination{
+  background-color: #004d40;
+}
+
+body{
+  position: relative;
+}
+.contents{
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.comments h4{
+  padding-top: 40px;
+}
+
+.comments p{
+  font-size: 30px;
+}
+
+/*textarea {
+  border: 1px solid #AAAAAA;
+  box-shadow: 1px 1px 1px 1px #E1E1E1 inset;
+  -moz-box-shadow: 1px 1px 1px 1px #E1E1E1 inset;
+  -webkit-box-shadow: 1px 1px 1px 1px #E1E1E1 inset;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 13px;
+  height: 210px;
+  width: 460px;
+  padding: 8px;
+}*/
+
+/*ここまで*/
+
+.msr_box01 {
+/*  background-color: #1B73BA;*/
+  width: 100%;
+  padding-bottom: 40px;
+}
+.msr_box01 a{
+  background-color: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  box-sizing: border-box;
+  color:#000000;
+  display:block;
+  padding: 8px;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+}
+.msr_box01 img{
+  margin:0 0 5px;
+  border-radius: 10px;
+}
+.msr_box01 .ttl {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/*.msr_box01 p {
+  font-size: 13px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}*/
+
+.main{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.article_show_main{
+  font-size: 13px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.msr_box01 a:hover{
+  opacity: 0.8;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KAWANOapp</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style type="text/css" href="./style.css"></style>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+<body>
+  <nav class="#004d40 teal darken-4">
+    <div class="nav-wrapper">
+      <a href="/articles" class="brand-logo">MOSS GREEN APPLICATION</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+          <%= current_user.nickname %>
+          <li><%= link_to 'マイページ', "/users/#{current_user.id}" %></li>
+          <li><%= link_to '投稿する', "/articles/new" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, method: :post %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, method: :get %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="contents">
+    <%= yield %>
+  </div>
+
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
